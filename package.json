@@ -1,0 +1,41 @@
+{
+  "name": "utils4u",
+  "type": "module",
+  "packageManager": "pnpm@8.6.8",
+  "version": "1.0.8",
+  "description": "",
+  "author": "",
+  "repository": {
+    "url": "https://github.com/yanhao98/utils4u"
+  },
+  "files": [
+    "ts-type-helpers.d.ts",
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm run clean && rollup -c",
+    "clean": "rimraf dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./ts-type-helpers": {
+      "types": "./ts-type-helper.d.ts"
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.26.3",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.4"
+  }
+}
