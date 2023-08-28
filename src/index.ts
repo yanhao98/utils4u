@@ -1,1 +1,2 @@
-export * from "./vite";
+export * from './vite.ts';
+export * from './IDCardUtil.ts';

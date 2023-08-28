@@ -3,6 +3,7 @@
   "include": ["src", "ts-type-helpers.d.ts"],
   "exclude": [],
   "compilerOptions": {
-    "moduleResolution": "node"
+    // "moduleResolution": "node"
+    "allowImportingTsExtensions": true
   }
 }
