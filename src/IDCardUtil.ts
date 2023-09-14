@@ -22,6 +22,26 @@ export function getAgeByIDCard(idCard?: string) {
 }
 
 /**
+ * 计算两个日期之间的年龄。
+ * @param startDate 开始日期 `1990-01-01`
+ * @param endDate 截止日期 `2021-01-01`
+ */
+export function getAgeByBirthday(startDate: string, endDate: string) {
+  if (!startDate || !endDate) return 0;
+  const birthYear = Number(startDate.substring(0, 4));
+  const birthMonth = Number(startDate.substring(5, 7));
+  const birthDay = Number(startDate.substring(8, 10));
+  const endYear = Number(endDate.substring(0, 4));
+  const endMonth = Number(endDate.substring(5, 7));
+  const endDay = Number(endDate.substring(8, 10));
+  let age = endYear - birthYear;
+  if (endMonth < birthMonth || (endMonth === birthMonth && endDay < birthDay)) {
+    age--;
+  }
+  return age;
+}
+
+/**
  * 根据身份证号获取性别。
  * @param idCard 身份证号
  * @returns
