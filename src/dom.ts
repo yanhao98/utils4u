@@ -34,13 +34,16 @@ export function chooseFile(options?: {
   accept?: string;
   multiple?: boolean;
 }): Promise<FileList | null> {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = options?.accept || '';
     input.multiple = options?.multiple || false;
     input.onchange = () => {
       resolve(input.files);
+    };
+    input.oncancel = () => {
+      reject('User cancel');
     };
     input.click();
   });
