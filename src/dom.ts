@@ -30,7 +30,10 @@ export function disableWebPageZoom() {
  * Choose file from device
  * @example const files = await chooseFile({ accept: 'image/*', multiple: true });
  */
-export function chooseFile(options?: { accept?: string; multiple?: boolean }) {
+export function chooseFile(options?: {
+  accept?: string;
+  multiple?: boolean;
+}): Promise<FileList | null> {
   return new Promise((resolve) => {
     const input = document.createElement('input');
     input.type = 'file';
