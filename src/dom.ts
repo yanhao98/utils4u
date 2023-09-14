@@ -25,3 +25,20 @@ export function disableWebPageZoom() {
     event.preventDefault();
   });
 }
+
+/**
+ * Choose file from device
+ * @example const files = await chooseFile({ accept: 'image/*', multiple: true });
+ */
+export function chooseFile(options?: { accept?: string; multiple?: boolean }) {
+  return new Promise((resolve) => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = options?.accept || '';
+    input.multiple = options?.multiple || false;
+    input.onchange = () => {
+      resolve(input.files);
+    };
+    input.click();
+  });
+}

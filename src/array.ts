@@ -19,7 +19,7 @@ interface IConfig {
  * flat list to tree
  *
  * @param list - a flat list
- * @example `flatListToTree<IFolder>(folderArr, { id: 'folderId', parentId: 'folderParentId' });`
+ * @example flatListToTree<IFolder>(folderArr, { id: 'folderId', parentId: 'folderParentId' });
  */
 export function flatListToTree<T extends Recorable = Recorable>(
   list: T[],
