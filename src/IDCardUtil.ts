@@ -26,7 +26,7 @@ export function getAgeByIDCard(idCard?: string) {
  * @param startDate 开始日期 `1990-01-01`
  * @param endDate 截止日期 `2021-01-01`
  */
-export function getAgeByBirthday(startDate: string, endDate: string) {
+export function getAgeByDate(startDate: string, endDate: string) {
   if (!startDate || !endDate) return 0;
   const birthYear = Number(startDate.substring(0, 4));
   const birthMonth = Number(startDate.substring(5, 7));
