@@ -1,4 +1,8 @@
-/* 
+/**
+ * element-ui -> src/utils/vdom.js isVNode
+ */
+
+/**
   https://stackoverflow.com/questions/37808180/disable-viewport-zooming-ios-10-safari
   https://medium.com/@littleDog/如何解決-user-scalable-no-屬性被ios-safari-ignore-e6a0531050ba
 */

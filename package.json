@@ -32,12 +32,12 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.1",
-    "rimraf": "^5.0.1",
-    "rollup": "^3.28.1",
-    "rollup-plugin-dts": "^5.3.1",
-    "rollup-plugin-esbuild": "^5.0.0",
+    "@tsconfig/node18": "^18.2.2",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-esbuild": "^6.0.2",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.11"
   }
 }

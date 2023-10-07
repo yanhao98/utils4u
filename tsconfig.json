@@ -6,6 +6,8 @@
     // TODO: 拆分tsconfig.json tsconfig.dom.json tsconfig.node.json
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     // "moduleResolution": "node"
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "emitDeclarationOnly": false
   }
 }
