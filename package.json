@@ -2,7 +2,7 @@
   "name": "utils4u",
   "type": "module",
   "packageManager": "pnpm@8.6.8",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "",
   "author": "",
   "repository": {
@@ -34,9 +34,9 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "rimraf": "^5.0.5",
-    "rollup": "^3.29.4",
-    "rollup-plugin-dts": "^6.0.2",
-    "rollup-plugin-esbuild": "^6.0.2",
+    "rollup": "^4.0.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.11"
   }
