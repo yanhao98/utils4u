@@ -41,8 +41,10 @@ export function chooseFile(options?: {
   return new Promise((resolve, reject) => {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = options?.accept || '';
-    input.multiple = options?.multiple || false;
+    if (options) {
+      input.accept = options.accept || '';
+      input.multiple = options.multiple || false;
+    }
     input.onchange = () => {
       resolve(input.files);
     };
