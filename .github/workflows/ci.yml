@@ -1,16 +1,12 @@
-name: Publish Package
-
-permissions:
-  id-token: write
-  # contents: write
+name: CI
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - main
 
 jobs:
-  publish-npm:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,10 +22,11 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: 'pnpm'
           cache-dependency-path: './pnpm-lock.yaml'
-
+          
       - run: pnpm install
 
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_CONFIG_PROVENANCE: true
+      - uses: oven-sh/setup-bun@v1
+      - run: bun test
+
+      - run: pnpm build
+

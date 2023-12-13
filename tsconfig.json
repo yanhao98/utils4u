@@ -1,10 +1,21 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
-  "include": ["src", "ts-type-helpers.d.ts"],
+  "include": [
+    "src",
+    "ts-type-helpers.d.ts"
+  ],
   "exclude": [],
   "compilerOptions": {
+    "types": [
+      "bun-types",
+      "./src/types.d.ts",
+    ],
     // TODO: 拆分tsconfig.json tsconfig.dom.json tsconfig.node.json
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     // "moduleResolution": "node"
     "allowImportingTsExtensions": true,
     "noEmit": true,
