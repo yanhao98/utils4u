@@ -2,7 +2,7 @@
   "name": "utils4u",
   "type": "module",
   "packageManager": "pnpm@8.6.8",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "",
   "author": "",
   "repository": {
@@ -17,14 +17,14 @@
     "clean": "rimraf dist",
     "prepublishOnly": "pnpm run build"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js"
     },
     "./ts-type-helpers": {
       "types": "./ts-type-helper.d.ts"
@@ -35,11 +35,11 @@
     "@tsconfig/node18": "^18.2.2",
     "bun-types": "latest",
     "rimraf": "^5.0.5",
-    "rollup": "^4.8.0",
+    "rollup": "^4.9.5",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.8"
+    "vite": "^5.0.11"
   },
   "engines": {
     "node": ">=18.0.0"
