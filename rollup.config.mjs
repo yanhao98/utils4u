@@ -9,16 +9,22 @@ const config = defineConfig([
   {
     input,
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
+      { file: pkg.main, format: 'es', sourcemap: true },
     ],
     external: ['vite'],
-    plugins: [esbuild()],
+    plugins: [
+      esbuild()
+    ],
   },
   {
     input,
     output: [{ file: pkg.types, format: 'es' }],
-    plugins: [dts()],
+    external: ['vite'],
+    plugins: [
+      dts({
+        respectExternal: true,
+      })
+    ],
   },
 ]);
 

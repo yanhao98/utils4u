@@ -1,13 +1,12 @@
 {
   "name": "utils4u",
   "type": "module",
-  "packageManager": "pnpm@8.6.8",
+  "packageManager": "pnpm@8.15.1",
   "version": "1.0.24",
   "description": "",
   "author": "",
-  "repository": {
-    "url": "https://github.com/yanhao98/utils4u"
-  },
+  "main": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "ts-type-helpers.d.ts",
     "dist"
@@ -17,20 +16,19 @@
     "clean": "rimraf dist",
     "prepublishOnly": "pnpm run build"
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs.js",
-      "import": "./dist/index.esm.js"
+      "default": "./dist/index.esm.js"
     },
     "./ts-type-helpers": {
       "types": "./ts-type-helper.d.ts"
     }
   },
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/yanhao98/utils4u"
+  },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "bun-types": "latest",
