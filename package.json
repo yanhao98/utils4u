@@ -27,7 +27,7 @@
   },
   "license": "ISC",
   "repository": {
-    "url": "https://github.com/yanhao98/utils4u"
+    "url": "git+https://github.com/yanhao98/utils4u.git"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
