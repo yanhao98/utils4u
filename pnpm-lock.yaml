@@ -10,7 +10,7 @@ devDependencies:
     version: 18.2.2
   bun-types:
     specifier: latest
-    version: 1.0.23
+    version: 1.0.27
   rimraf:
     specifier: ^5.0.5
     version: 5.0.5
@@ -470,12 +470,11 @@ packages:
       balanced-match: 1.0.2
     dev: true
 
-  /bun-types@1.0.23:
-    resolution: {integrity: sha512-K3eFQrZk2LWAdp7qcMz+m40Mz+RQc3jpgroQRlQqvQLSFL4qQ3tULBrKHzSwh0P9P7vyHbhyJ5IGKj/cmQFLGg==}
+  /bun-types@1.0.27:
+    resolution: {integrity: sha512-fwaJ3Ey6InD4nAkUd+AwzHDmxGdWWRy/SWh0QQEw7QF/ABnoqSv+iQrA5tIK4TyUyR/V9446G+w53+sOmJOJyA==}
     dependencies:
       '@types/node': 20.11.5
       '@types/ws': 8.5.10
-      undici-types: 5.28.2
     dev: true
 
   /chalk@2.4.2:
@@ -860,10 +859,6 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-    dev: true
-
-  /undici-types@5.28.2:
-    resolution: {integrity: sha512-W71OLwDqzIO0d3k07qg1xc7d4cX8SsSwuCO4bQ4V7ITwduXXie/lcImofabP5VV+NvuvSe8ovKvHVJcizVc1JA==}
     dev: true
 
   /vite@5.0.11:
