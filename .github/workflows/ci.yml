@@ -1,9 +1,8 @@
-name: CI
+name: Bun Test
 
 on:
   push:
-    branches:
-      - main
+  pull_request:
 
 jobs:
   test:
@@ -14,6 +13,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       - name: Use Node.js v18
         uses: actions/setup-node@v4
