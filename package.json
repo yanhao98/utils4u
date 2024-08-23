@@ -2,7 +2,10 @@
   "name": "utils4u",
   "version": "2.0.0",
   "description": "",
-  "repository": "yanhao98/utils4u",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanhao98/utils4u.git"
+  },
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
