@@ -15,7 +15,7 @@ const httpsRE = /^https:\/\//;
  * Generate proxy
  * @param list
  */
-export function createViteProxy(list: ProxyList | string | undefined) {
+export function createViteProxy(list?: ProxyList | string) {
   if (list === undefined) {
     list = loadEnv('development', process.cwd(), ['VITE_DEV_PROXY']).VITE_DEV_PROXY ?? [];
   }
