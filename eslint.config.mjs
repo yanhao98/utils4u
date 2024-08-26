@@ -6,6 +6,7 @@ export default unjs({
   ],
   rules: {
     // rule overrides
+    'unicorn/no-console-spaces': 'off',
   },
   markdown: {
     rules: {
