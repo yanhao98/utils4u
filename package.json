@@ -21,6 +21,10 @@
     "./vue-router": {
       "types": "./dist/vue-router/index.d.mts",
       "default": "./dist/vue-router/index.mjs"
+    },
+    "./rollup": {
+      "types": "./dist/rollup/index.d.mts",
+      "default": "./dist/rollup/index.mjs"
     }
   },
   "main": "dist/index.mjs",
@@ -55,6 +59,7 @@
     "jiti": "2.0.0-beta.3",
     "jsdom": "^25.0.0",
     "nprogress": "^0.2.0",
+    "pinyin-pro": "^3.24.2",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "unbuild": "3.0.0-rc.7",

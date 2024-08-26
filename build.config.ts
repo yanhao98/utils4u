@@ -1,8 +1,8 @@
 import { defineBuildConfig } from 'unbuild';
 
 export default defineBuildConfig({
-  entries: ['src/index', 'src/vite/index', 'src/vue-router/index'],
+  entries: ['src/index.ts', 'src/vite/index.ts', 'src/vue-router/index.ts', 'src/rollup/index.ts'],
   clean: true,
   declaration: true,
-  externals: ['vite', 'vue-router', 'nprogress'],
+  externals: ['vite', 'vue-router', 'nprogress', 'rollup', 'pinyin-pro'],
 });
