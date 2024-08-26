@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.3.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.2.1...v2.3.0)
+
+### 🚀 Enhancements
+
+- CreateSplitChunkOutput ([34a0349](https://github.com/yanhao98/utils4u/commit/34a0349))
+
+### 🏡 Chore
+
+- **release:** V2.2.1 ([ee8cc1e](https://github.com/yanhao98/utils4u/commit/ee8cc1e))
+- Apply automated updates ([f268bc5](https://github.com/yanhao98/utils4u/commit/f268bc5))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.2.1
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.2.0...v2.2.1)
