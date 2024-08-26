@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.2.1
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.2.0...v2.2.1)
+
+### 🩹 Fixes
+
+- Update createViteProxy function to accept an optional parameter for the proxy list ([9db8b44](https://github.com/yanhao98/utils4u/commit/9db8b44))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.2.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.1.2...v2.2.0)
