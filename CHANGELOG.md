@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.1.2
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.1.1...v2.1.2)
+
+### 🏡 Chore
+
+- Update build.config.ts with additional externals ([4eb9bdf](https://github.com/yanhao98/utils4u/commit/4eb9bdf))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.1.1
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.1.0...v2.1.1)
