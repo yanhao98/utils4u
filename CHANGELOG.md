@@ -1,8 +1,10 @@
 # Changelog
 
+## v2.1.1
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.1.0...v2.1.1)
 
 ## v2.1.0
-
 
 ### 🚀 Enhancements
 
@@ -16,4 +18,3 @@
 ### ❤️ Contributors
 
 - 严浩 <me@yanhao.ren>
-
