@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.2.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.1.2...v2.2.0)
+
+### 🚀 Enhancements
+
+- Update vite proxy to load configuration from .env file ([8080662](https://github.com/yanhao98/utils4u/commit/8080662))
+
+### 🏡 Chore
+
+- Disable unicorn/no-console-spaces rule ([a8a5cf8](https://github.com/yanhao98/utils4u/commit/a8a5cf8))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.1.2
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.1.1...v2.1.2)
