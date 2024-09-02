@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.6.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.5.1...v2.6.0)
+
+### 🚀 Enhancements
+
+- Add deepFreeze utility function for object immutability ([979c1d2](https://github.com/yanhao98/utils4u/commit/979c1d2))
+
+### 🏡 Chore
+
+- **release:** V2.5.1 ([c30fc88](https://github.com/yanhao98/utils4u/commit/c30fc88))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.5.1
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.5.0...v2.5.1)
