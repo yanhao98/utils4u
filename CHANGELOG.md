@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.4.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.3.0...v2.4.0)
+
+### 🚀 Enhancements
+
+- Add Vant dialog component and TDesign Mobile Vue popup component ([cc05a80](https://github.com/yanhao98/utils4u/commit/cc05a80))
+
+### 🏡 Chore
+
+- Apply automated updates ([e5cdc9b](https://github.com/yanhao98/utils4u/commit/e5cdc9b))
+- Ignore .rslib and .rslib-output directories in eslint configuration ([1721d14](https://github.com/yanhao98/utils4u/commit/1721d14))
+- Update eslint configuration to ignore .rslib and .rslib-output directories ([c6fc9b7](https://github.com/yanhao98/utils4u/commit/c6fc9b7))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.3.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.2.1...v2.3.0)
