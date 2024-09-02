@@ -31,8 +31,8 @@
       "default": "./dist/tdesign-mobile-vue/index.js"
     },
     "./vant": {
-      "types": "./dist/tdesign-mobile-vue/index.d.ts",
-      "default": "./dist/tdesign-mobile-vue/index.js"
+      "types": "./dist/vant/index.d.ts",
+      "default": "./dist/vant/index.js"
     }
   },
   "main": "dist/index.mjs",
