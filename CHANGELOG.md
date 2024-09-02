@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.5.1
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.5.0...v2.5.1)
+
+### 🩹 Fixes
+
+- 修复 utils4u/vant 导出 ([f2be129](https://github.com/yanhao98/utils4u/commit/f2be129))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.5.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.3.0...v2.5.0)
