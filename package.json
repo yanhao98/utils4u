@@ -33,6 +33,10 @@
     "./vant": {
       "types": "./dist/vant/index.d.ts",
       "default": "./dist/vant/index.js"
+    },
+    "./vue-use": {
+      "types": "./dist/vue-use/index.d.mts",
+      "default": "./dist/vue-use/index.mjs"
     }
   },
   "main": "dist/index.mjs",
