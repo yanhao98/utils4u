@@ -1,4 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>unjs/renovate-config", ":disableDependencyDashboard"]
+  "extends": ["config:base", ":disableDependencyDashboard", "group:allNonMajor", ":semanticCommitTypeAll(chore)"],
+  "rangeStrategy": "bump",
+  "labels": ["dependencies"]
 }
