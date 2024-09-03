@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.7.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.6.0...v2.7.0)
+
+### 🚀 Enhancements
+
+- Add vue-use module for reusable Vue composition functions ([88765b7](https://github.com/yanhao98/utils4u/commit/88765b7))
+
+### 🏡 Chore
+
+- **release:** V2.6.0 ([7b4b7c7](https://github.com/yanhao98/utils4u/commit/7b4b7c7))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.6.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.5.1...v2.6.0)
