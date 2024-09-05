@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.8.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.7.0...v2.8.0)
+
+### 🚀 Enhancements
+
+- Add browser viewport compatibility module ([e28a7c4](https://github.com/yanhao98/utils4u/commit/e28a7c4))
+
+### 🏡 Chore
+
+- **release:** V2.7.0 ([a0e0e95](https://github.com/yanhao98/utils4u/commit/a0e0e95))
+- Update renovate.json configuration for dependency management ([b529313](https://github.com/yanhao98/utils4u/commit/b529313))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.7.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.6.0...v2.7.0)
