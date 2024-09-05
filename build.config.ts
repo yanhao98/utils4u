@@ -9,6 +9,7 @@ export default defineBuildConfig({
     'src/vue-router/index.ts',
     'src/rollup/index.ts',
     'src/vue-use/index.ts',
+    'src/browser/index.ts',
   ],
   clean: false,
   declaration: true,
