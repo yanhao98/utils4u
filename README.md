@@ -41,19 +41,19 @@ Import:
 **ESM** (Node.js, Bun)
 
 ```js
-import {} from 'pkg';
+import {} from "pkg";
 ```
 
 **CommonJS** (Legacy Node.js)
 
 ```js
-const {} = require('pkg');
+const {} = require("pkg");
 ```
 
 **CDN** (Deno, Bun and Browsers)
 
 ```js
-import {} from 'https://esm.sh/pkg';
+import {} from "https://esm.sh/pkg";
 ```
 
 <!-- /automd -->
