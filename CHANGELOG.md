@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.10.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.9.0...v2.10.0)
+
+### 🚀 Enhancements
+
+- ToBase64 ([cc16f85](https://github.com/yanhao98/utils4u/commit/cc16f85))
+
+### 🏡 Chore
+
+- **release:** V2.9.0 ([7ff7871](https://github.com/yanhao98/utils4u/commit/7ff7871))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.9.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.8.0...v2.9.0)
