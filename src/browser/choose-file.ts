@@ -3,7 +3,7 @@ type ChooseFileOptions = {
   multiple?: boolean;
 };
 
-export function chooseFile(options: ChooseFileOptions) {
+export function chooseFile(options: ChooseFileOptions): Promise<FileList> {
   return new Promise((resolve, reject) => {
     const input = document.createElement('input');
     input.type = 'file';
@@ -12,7 +12,7 @@ export function chooseFile(options: ChooseFileOptions) {
       input.multiple = options.multiple || false;
     }
     input.addEventListener('change', () => {
-      resolve(input.files);
+      resolve(input.files!);
     });
     input.addEventListener('cancel', () => {
       reject('User cancel');
