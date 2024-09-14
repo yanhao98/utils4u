@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.10.1
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.10.0...v2.10.1)
+
+### 🏡 Chore
+
+- **release:** V2.10.0 ([9867365](https://github.com/yanhao98/utils4u/commit/9867365))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.10.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.9.0...v2.10.0)
