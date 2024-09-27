@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.11.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.10.1...v2.11.0)
+
+### 🚀 Enhancements
+
+- Add useRefs function to vue-use module ([a8d14a2](https://github.com/yanhao98/utils4u/commit/a8d14a2))
+
+### 🏡 Chore
+
+- **release:** V2.10.1 ([9cf23ab](https://github.com/yanhao98/utils4u/commit/9cf23ab))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.10.1
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.10.0...v2.10.1)
