@@ -1,6 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":disableDependencyDashboard", "group:allNonMajor", ":semanticCommitTypeAll(chore)"],
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":semanticCommitTypeAll(chore)",
+    "group:allNonMajor",
+    "customManagers:githubActionsVersions"
+  ],
   "rangeStrategy": "bump",
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "stabilityDays": 7
+    }
+  ]
 }
