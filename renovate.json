@@ -1,18 +1,6 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":disableDependencyDashboard",
-    ":semanticCommitTypeAll(chore)",
-    "group:allNonMajor",
-    "customManagers:githubActionsVersions"
-  ],
-  "rangeStrategy": "bump",
-  "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "stabilityDays": 7
-    }
-  ]
+"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		 	"https://git.1-h.cc/examples/renovate-example/raw/branch/main/default.json5"
+		]
 }
