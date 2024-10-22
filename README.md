@@ -3,7 +3,7 @@
 <!-- automd:badges color=yellow -->
 
 [![npm version](https://img.shields.io/npm/v/utils4u?color=yellow)](https://npmjs.com/package/utils4u)
-[![npm downloads](https://img.shields.io/npm/dm/utils4u?color=yellow)](https://npmjs.com/package/utils4u)
+[![npm downloads](https://img.shields.io/npm/dm/utils4u?color=yellow)](https://npm.chart.dev/utils4u)
 
 <!-- /automd -->
 
@@ -30,6 +30,9 @@ pnpm install utils4u
 
 # bun
 bun install utils4u
+
+# deno
+deno install utils4u
 ```
 
 <!-- /automd -->
@@ -38,7 +41,7 @@ Import:
 
 <!-- automd:jsimport cjs cdn name="pkg" -->
 
-**ESM** (Node.js, Bun)
+**ESM** (Node.js, Bun, Deno)
 
 ```js
 import {} from 'pkg';
