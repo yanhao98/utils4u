@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.12.1
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.12.0...v2.12.1)
+
 ## v2.12.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.11.0...v2.12.0)
