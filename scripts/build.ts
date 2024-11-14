@@ -35,6 +35,11 @@ for (const entryPoint of exportsDirs) {
         dts: { bundle: true },
         autoExtension: true,
         autoExternal: { devDependencies: true, peerDependencies: true },
+        output: {
+          sourceMap: {
+            js: 'source-map',
+          },
+        },
       },
     ],
     source: {
@@ -65,6 +70,7 @@ await unbuild(rootDir, false, {
   outDir: 'dist',
   clean: true,
   declaration: true,
+  sourcemap: true,
   externals: ['vite', 'vue-router', 'nprogress', 'rollup', 'pinyin-pro'],
 });
 
