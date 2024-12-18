@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.15.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.14.0...v2.15.0)
+
+### 🚀 Enhancements
+
+- 添加 Utils4uAutoImports 以支持自动导入功能 ([abf0743](https://github.com/yanhao98/utils4u/commit/abf0743))
+
+### 🏡 Chore
+
+- **release:** V2.14.0 ([7b64e15](https://github.com/yanhao98/utils4u/commit/7b64e15))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.14.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.12.2...v2.14.0)
