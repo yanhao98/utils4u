@@ -66,7 +66,13 @@ for (const entryPoint of exportsDirs) {
 }
 
 await unbuild(rootDir, false, {
-  entries: ['src/index.ts', 'src/vite/index.ts', 'src/vue-router/index.ts', 'src/rollup/index.ts'],
+  entries: [
+    'src/auto-imports/index.ts',
+    'src/index.ts',
+    'src/vite/index.ts',
+    'src/vue-router/index.ts',
+    'src/rollup/index.ts',
+  ],
   outDir: 'dist',
   clean: true,
   declaration: true,
