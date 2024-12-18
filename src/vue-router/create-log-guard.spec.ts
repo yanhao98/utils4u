@@ -40,7 +40,7 @@ const router = createRouter({
 
 test('createLogGuard', async () => {
   createLogGuard(router);
-  const debugSpy = vi.spyOn(global.window.console, 'debug');
+  const debugSpy = vi.spyOn(globalThis.window.console, 'debug');
 
   router.push('/');
   await router.isReady();

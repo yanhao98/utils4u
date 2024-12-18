@@ -16,10 +16,10 @@ describe('createStackGuard', () => {
       return new Promise((resolve) => {
         async function popStateListener() {
           await flushPromises();
-          window.removeEventListener('popstate', popStateListener);
+          globalThis.removeEventListener('popstate', popStateListener);
           resolve();
         }
-        window.addEventListener('popstate', popStateListener);
+        globalThis.addEventListener('popstate', popStateListener);
       });
     }
 

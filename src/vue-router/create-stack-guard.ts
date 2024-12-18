@@ -97,7 +97,7 @@ export function createStackGuard(router: Router) {
     } else {
       diractionEmoji = '=↺=';
     }
-    Object.assign(to, { locationHref: window.location.href });
+    Object.assign(to, { locationHref: globalThis.location.href });
     stack[stackIdx] = to as StackItem;
 
     curPos = newPos;
