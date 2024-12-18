@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.16.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.15.0...v2.16.0)
+
+### 🚀 Enhancements
+
+- 添加 auto-imports 支持到 package.json ([9c90962](https://github.com/yanhao98/utils4u/commit/9c90962))
+
+### 🏡 Chore
+
+- **release:** V2.15.0 ([992698d](https://github.com/yanhao98/utils4u/commit/992698d))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.15.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.14.0...v2.15.0)
