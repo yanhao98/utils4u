@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.17.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.16.0...v2.17.0)
+
+### 🚀 Enhancements
+
+- 更新自动导入功能，重命名和添加相关模块 ([bcc1fe5](https://github.com/yanhao98/utils4u/commit/bcc1fe5))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.16.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.15.0...v2.16.0)
