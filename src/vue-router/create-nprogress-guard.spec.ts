@@ -4,7 +4,7 @@
 import { config, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createRouterMock, injectRouterMock, VueRouterMock } from 'vue-router-mock';
-import { createProgressGuard } from '.';
+import { createNProgressGuard } from '.';
 
 describe('createProgressGuard', () => {
   // create one mock instance, pass options
@@ -21,7 +21,7 @@ describe('createProgressGuard', () => {
     const wrapper = mount({ template: '<div/>' });
     expect(wrapper.router).toBe(_router);
     // (await import('.')).createLogGuard(wrapper.router);
-    const NProgress = createProgressGuard(wrapper.router);
+    const NProgress = createNProgressGuard(wrapper.router);
     const startSpy = vi.spyOn(NProgress, 'start');
     const doneSpy = vi.spyOn(NProgress, 'done');
     expect(NProgress.isRendered()).toBe(false);

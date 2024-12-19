@@ -5,7 +5,7 @@ import NProgress from 'nprogress';
 /**
  * ```<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/nprogress/nprogress.css">```
  */
-export function createProgressGuard(router: Router) {
+export function createNProgressGuard(router: Router) {
   router.beforeEach(() => {
     NProgress.start();
   });

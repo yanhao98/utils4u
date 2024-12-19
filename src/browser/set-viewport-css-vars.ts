@@ -1,5 +1,5 @@
 // https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
-export function browserViewportCompat() {
+export function setViewportCSSVars() {
   // height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   // height: calc(var(--vh, 1vh) * 100);
 

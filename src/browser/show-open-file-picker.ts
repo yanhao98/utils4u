@@ -1,9 +1,11 @@
-type ChooseFileOptions = {
+// https://developer.mozilla.org/zh-CN/docs/Web/API/Window/showOpenFilePicker
+
+type FileSelectionOptions = {
   accept?: string;
   multiple?: boolean;
 };
 
-export function chooseFile(options: ChooseFileOptions): Promise<FileList> {
+export function showOpenFilePicker(options: FileSelectionOptions): Promise<FileList> {
   return new Promise((resolve, reject) => {
     const input = document.createElement('input');
     input.type = 'file';
