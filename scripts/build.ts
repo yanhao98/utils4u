@@ -18,7 +18,7 @@ function ensureTempOutputDir(): string {
   fs.writeFileSync(gitIgnorePath, '**/*\n');
   return dirPath;
 }
-const exportsDirs: string[] = ['tdesign-mobile-vue', 'vant'];
+const exportsDirs: string[] = ['tdesign-mobile-vue', 'vant', 'primevue'];
 
 rimrafSync(ensureTempOutputDir(), {
   filter: (path, ent) => {

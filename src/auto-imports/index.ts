@@ -1,8 +1,8 @@
 type ImportsMap = Record<string, (string | ImportNameAlias)[]>;
 type ImportNameAlias = [string, string];
-// type Deps = 'tdesign-mobile-vue' | 'vant';
+type Deps = 'tdesign-mobile-vue' | 'vant' | 'primevue';
 
-export function createUtils4uAutoImports(/* deps: Deps[] */): ImportsMap {
+export function createUtils4uAutoImports(deps: Deps[]): ImportsMap {
   const imports: ImportsMap = {
     'deep-freeze-es6': [['default', 'deepFreeze']],
     // 待整理 https://github.com/unplugin/unplugin-auto-import/blob/627f60a114ea82995a2ce9814374c0bcc1e17904/src/presets/index.ts
@@ -10,6 +10,10 @@ export function createUtils4uAutoImports(/* deps: Deps[] */): ImportsMap {
     'utils4u/vue-router': ['createLogGuard', 'createNProgressGuard', 'createStackGuard'],
     'utils4u/browser': ['setViewportCSSVars', 'showOpenFilePicker', 'convertFileToBase64'],
   };
+
+  if (deps.includes('primevue')) {
+    imports['utils4u/primevue'] = ['ConfirmationService', 'DialogService', 'ToastService', 'usePrimevueDialogRef'];
+  }
 
   // if (deps.includes('tdesign-mobile-vue')) {
   //   imports['utils4u/tdesign-mobile-vue'] = [

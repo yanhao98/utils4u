@@ -16,6 +16,7 @@ export default defineConfig({
     entry: {
       'tdesign-mobile-vue/index': './src/tdesign-mobile-vue/index.ts',
       'vant/index': './src/vant/index.ts',
+      'primevue/index': 'src/primevue/index.ts',
     },
   },
   plugins: [
