@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.18.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.17.0...v2.18.0)
+
+### 🚀 Enhancements
+
+- 添加 PrimeVue 支持，包含确认、对话框和吐司服务 ([8e00bdb](https://github.com/yanhao98/utils4u/commit/8e00bdb))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.17.0
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.16.0...v2.17.0)
