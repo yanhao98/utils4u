@@ -1,6 +1,6 @@
 {
   "name": "utils4u",
-  "version": "2.18.0",
+  "version": "2.18.1",
   "description": "Utilities for you",
   "repository": {
     "type": "git",
@@ -47,8 +47,8 @@
       "default": "./dist/auto-imports/index.mjs"
     },
     "./primevue": {
-      "types": "./dist/primevue/index.d.mts",
-      "default": "./dist/primevue/index.mjs"
+      "types": "./dist/primevue/index.d.ts",
+      "default": "./dist/primevue/index.js"
     }
   },
   "main": "dist/index.mjs",
