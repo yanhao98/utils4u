@@ -9,6 +9,7 @@ export function createUtils4uAutoImports(deps: Deps[]): ImportsMap {
     'utils4u/vue-use': ['useCountdown', 'useRefs'],
     'utils4u/vue-router': ['createLogGuard', 'createNProgressGuard', 'createStackGuard'],
     'utils4u/browser': ['setViewportCSSVars', 'showOpenFilePicker', 'convertFileToBase64'],
+    'utils4u/array': ['arrayToTree'],
   };
 
   if (deps.includes('primevue')) {
