@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.19.2
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.19.1...v2.19.2)
+
+### 🩹 Fixes
+
+- 更新构建脚本以使用 index.ts 替代 array-to-tree.ts ([02eb76e](https://github.com/yanhao98/utils4u/commit/02eb76e))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.19.1
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.19.0...v2.19.1)
