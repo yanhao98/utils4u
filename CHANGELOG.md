@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.19.0
+
+[compare changes](https://github.com/yanhao98/utils4u/compare/v2.18.1...v2.19.0)
+
+### 🚀 Enhancements
+
+- 添加 arrayToTree 函数并更新相关模块 ([9db046d](https://github.com/yanhao98/utils4u/commit/9db046d))
+
+### ❤️ Contributors
+
+- 严浩 <me@yanhao.ren>
+
 ## v2.18.1
 
 [compare changes](https://github.com/yanhao98/utils4u/compare/v2.18.0...v2.18.1)
