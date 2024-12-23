@@ -71,7 +71,7 @@ await unbuild(rootDir, false, {
     'src/vite/index.ts',
     'src/vue-router/index.ts',
     'src/rollup/index.ts',
-    'src/array/array-to-tree.ts',
+    'src/array/index.ts',
   ],
   outDir: 'dist',
   clean: true,
