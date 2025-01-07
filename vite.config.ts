@@ -13,7 +13,30 @@ const entry = globSync('src/**/index.ts').reduce<Record<string, string>>((acc, f
   acc[key] = fileURLToPath(new URL(`./${file}`, import.meta.url));
   return acc;
 }, {});
-console.debug(`entry :>> `, entry);
+
+{
+  type ExportConfig = Record<
+    string,
+    {
+      types: string;
+      default: string;
+    }
+  >;
+  const exports = globSync('src/**/index.ts').reduce<ExportConfig>(
+    (acc, file) => {
+      const key = file.replace('src/', '').replace('.ts', '');
+      acc[`./${key.replace('/index', '')}`] = {
+        types: `./dist/${key}.d.ts`,
+        default: `./dist/${key}.js`,
+      };
+      return acc;
+    },
+    { '.': { types: './dist/index.d.ts', default: './dist/index.js' } },
+  );
+  delete exports['./index'];
+  Object.assign(pkg, { exports, types: './dist/index.d.ts', module: './dist/index.js', main: './dist/index.js' });
+  import('fs/promises').then((fs) => fs.writeFile('package.json', JSON.stringify(pkg, null, 2)));
+}
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -29,10 +52,10 @@ export default defineConfig({
     lib: { entry, formats: ['es'] },
     rollupOptions: {
       external: [...Object.keys(pkg.peerDependencies), ...Object.keys(pkg.devDependencies)],
-      /* output: {
-        assetFileNames: 'assets/[name][extname]',
+      output: {
+        // assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
-      }, */
+      },
     },
   },
 });
