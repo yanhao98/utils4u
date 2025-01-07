@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/yanhao98/utils4u/compare/v3.1.0...v3.2.0) (2025-01-07)
+
+
+### Features
+
+* 更新 Vite 配置，添加 sourcemap 支持并修复 package.json 格式 ([a427b61](https://github.com/yanhao98/utils4u/commit/a427b612b06b4d77818513d188d1b0a74818d7f4))
+
 # [3.1.0](https://github.com/yanhao98/utils4u/compare/v3.0.1...v3.1.0) (2025-01-07)
 
 
