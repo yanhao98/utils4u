@@ -35,7 +35,7 @@ const entry = globSync('src/**/index.ts').reduce<Record<string, string>>((acc, f
   );
   delete exports['./index'];
   Object.assign(pkg, { exports, types: './dist/index.d.ts', module: './dist/index.js', main: './dist/index.js' });
-  import('fs/promises').then((fs) => fs.writeFile('package.json', JSON.stringify(pkg, null, 2)));
+  import('fs/promises').then((fs) => fs.writeFile('package.json', JSON.stringify(pkg, null, 2) + '\n'));
 }
 
 // https://vite.dev/config/
@@ -48,6 +48,7 @@ export default defineConfig({
     dts({ tsconfigPath: './tsconfig.app.json' /* , rollupTypes: true */ }),
   ],
   build: {
+    sourcemap: true,
     minify: 'terser',
     lib: { entry, formats: ['es'] },
     rollupOptions: {
