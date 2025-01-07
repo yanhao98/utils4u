@@ -11,7 +11,7 @@ on:
       - vite
 
 jobs:
-  ci:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: yanhao98/composite-actions/setup-node-environment@main
