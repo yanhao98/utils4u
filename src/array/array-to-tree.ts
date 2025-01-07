@@ -2,7 +2,6 @@ type TTree<T> = {
   children?: TTree<T>[];
 } & T;
 
-// eslint-disable-next-line unicorn/prefer-structured-clone
 const deepClone = globalThis.structuredClone ?? ((value: any) => JSON.parse(JSON.stringify(value)));
 
 /**
@@ -15,7 +14,7 @@ const deepClone = globalThis.structuredClone ?? ((value: any) => JSON.parse(JSON
  */
 export const arrayToTree = <T>(
   list: T[],
-  { id, parentId, rootId = 0 }: { id: any; parentId: any; rootId?: any }
+  { id, parentId, rootId = 0 }: { id: any; parentId: any; rootId?: any },
 ): TTree<T>[] => {
   /** map between id and array position */
   const map: number[] = [];
