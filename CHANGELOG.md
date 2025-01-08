@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/yanhao98/utils4u/compare/v3.2.0...v3.3.0) (2025-01-08)
+
+
+### Features
+
+* 优化 Vite 配置，改进外部依赖处理逻辑 ([8ec07e2](https://github.com/yanhao98/utils4u/commit/8ec07e245ace73ba79954a53b9fe3f9853fa6fb8))
+
 # [3.2.0](https://github.com/yanhao98/utils4u/compare/v3.1.0...v3.2.0) (2025-01-07)
 
 
