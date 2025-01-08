@@ -7,6 +7,7 @@ import dts from 'vite-plugin-dts';
 
 import { globSync } from 'tinyglobby';
 import pkg from './package.json';
+const externalDeps = [...Object.keys(pkg.peerDependencies), ...Object.keys(pkg.devDependencies)];
 
 const entry = globSync('src/**/index.ts').reduce<Record<string, string>>((acc, file) => {
   const key = file.replace('src/', '').replace('.ts', '');
@@ -52,7 +53,8 @@ export default defineConfig({
     minify: 'terser',
     lib: { entry, formats: ['es'] },
     rollupOptions: {
-      external: [...Object.keys(pkg.peerDependencies), ...Object.keys(pkg.devDependencies)],
+      // external: externalDeps,
+      external: (source /* , importer, isResolved */) => externalDeps.some((dep) => source.startsWith(dep)),
       output: {
         // assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
