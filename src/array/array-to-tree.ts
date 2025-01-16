@@ -12,21 +12,19 @@ const deepClone = globalThis.structuredClone ?? ((value: any) => JSON.parse(JSON
  * @example `arrayToTree<IFolder>(folderArr, { id: 'folderId', parentId: 'folderParentId' });`
  * @returns `TTree`
  */
-export const arrayToTree = <T>(
+export function arrayToTree<T>(
   list: T[],
   { id, parentId, rootId = 0 }: { id: any; parentId: any; rootId?: any },
-): TTree<T>[] => {
+): TTree<T>[] {
   /** map between id and array position */
   const map: number[] = [];
 
   // [深拷贝](https://baijiahao.baidu.com/s?id=1765652696079292086&wfr=spider&for=pc)
   const treeList: TTree<T>[] = deepClone(list) as TTree<T>[];
   // const treeList: TTree<T>[] = cloneDeep(list) as TTree<T>[];
-
   // console.debug('list :>> ', JSON.stringify(list, null, 2), list);
   // console.debug(`list :>> `, list);
   // console.debug(`treeList :>> `, treeList);
-
   for (const [i, element_] of treeList.entries()) {
     /** initialize the map */
     map[(element_ as TTree<T> & { [id: string]: number })[id]] = i;
@@ -49,4 +47,4 @@ export const arrayToTree = <T>(
     }
   }
   return roots;
-};
+}
