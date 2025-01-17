@@ -1,11 +1,14 @@
 /**
  * @vitest-environment happy-dom
  */
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 
 import { showOpenFilePicker } from '.';
 
 describe('showOpenFilePicker', () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
   it('应该创建具有正确属性的input元素', async () => {
     const createElementSpy = vi.spyOn(document, 'createElement');
     const clickSpy = vi.spyOn(HTMLInputElement.prototype, 'click');
