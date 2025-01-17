@@ -2,7 +2,7 @@
 
 import { getCurrentInstance, reactive } from 'vue';
 
-export const useRefs = <T extends object>() => {
+export function useRefs<T extends object>() {
   const instance = getCurrentInstance();
   if (!instance) console.warn('useRefs() must be called within the setup() function');
 
@@ -12,4 +12,4 @@ export const useRefs = <T extends object>() => {
     refs,
     toRef,
   };
-};
+}
