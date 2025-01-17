@@ -14,7 +14,7 @@ import dayjs from 'dayjs';
   content: VNode;
 }; */
 
-type OpenPickerOptions = {
+export type OpenPickerOptions = {
   columns?: Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>);
   defaultValue?: Array<PickerValue>;
 };
@@ -50,9 +50,14 @@ export function openPopup(content: VNode) {
   const app = createApp({
     setup() {
       return () => (
-        <Popup closeOnOverlayClick={false} v-model={[visible.value, 'visible']} placement="bottom">
-          {content}
-        </Popup>
+        <Popup
+          v-slots={{
+            default: () => content,
+          }}
+          closeOnOverlayClick={false}
+          v-model={[visible.value, 'visible']}
+          placement="bottom"
+        ></Popup>
       );
     },
   });
