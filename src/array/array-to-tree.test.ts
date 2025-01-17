@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { arrayToTree } from './array-to-tree';
+
+import { arrayToTree } from '.';
 
 describe('arrayToTree', () => {
   it('应该将扁平数组转换为树形结构', () => {

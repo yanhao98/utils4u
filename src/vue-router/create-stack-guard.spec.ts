@@ -7,6 +7,7 @@
 import { flushPromises, mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
 import { createRouter, createWebHistory } from 'vue-router';
+
 import { createStackGuard } from '.';
 
 describe('createStackGuard', () => {

@@ -2,7 +2,8 @@
  * @vitest-environment happy-dom
  */
 import { describe, it, expect, vi } from 'vitest';
-import { showOpenFilePicker } from './show-open-file-picker';
+
+import { showOpenFilePicker } from '.';
 
 describe('showOpenFilePicker', () => {
   it('应该创建具有正确属性的input元素', async () => {

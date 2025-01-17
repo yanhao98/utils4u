@@ -1,10 +1,11 @@
 /**
  * @vitest-environment node
  */
-import { describe, expect, it } from 'vitest';
-import { createViteProxy } from './createViteProxy';
-import path from 'node:path';
 import fs from 'node:fs';
+import path from 'node:path';
+import { describe, expect, it } from 'vitest';
+
+import { createViteProxy } from '.';
 
 // vi.mock('vite', () => ({
 //   loadEnv: vi.fn(),

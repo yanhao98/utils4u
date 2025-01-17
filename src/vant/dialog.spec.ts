@@ -3,6 +3,7 @@
  */
 import { flushPromises } from '@vue/test-utils';
 import { describe, expect, it, vi, beforeEach } from 'vitest';
+
 import { confirmDialog } from '.';
 
 describe('confirmDialog', () => {

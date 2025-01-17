@@ -7,6 +7,7 @@
 import { flushPromises, mount } from '@vue/test-utils';
 import { expect, test, vi } from 'vitest';
 import { createMemoryHistory, createRouter } from 'vue-router';
+
 import { createLogGuard } from '.';
 
 const App = { template: `<router-link to="/posts">Go to posts</router-link><router-view />` };

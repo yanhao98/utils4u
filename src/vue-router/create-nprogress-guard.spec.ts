@@ -4,6 +4,7 @@
 import { config, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createRouterMock, injectRouterMock, VueRouterMock } from 'vue-router-mock';
+
 import { createNProgressGuard } from '.';
 
 describe('createProgressGuard', () => {

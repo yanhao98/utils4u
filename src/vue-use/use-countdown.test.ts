@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { useCountdown } from './use-countdown';
+
+import { useCountdown } from '.';
 
 describe('useCountdown', () => {
   beforeEach(() => {
