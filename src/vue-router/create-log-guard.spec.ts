@@ -43,6 +43,11 @@ test('createLogGuard', async () => {
   createLogGuard(router);
   const debugSpy = vi.spyOn(globalThis.window.console, 'debug');
 
+  debugSpy.mockImplementation((...args) => {
+    if (process.env.TERM_PROGRAM !== 'vscode') return;
+    console.log(...args.map(String));
+  });
+
   router.push('/');
   await router.isReady();
 
@@ -56,9 +61,6 @@ test('createLogGuard', async () => {
   expect(wrapper.html()).toContain('Testing Vue Router');
   expect(debugSpy).toHaveBeenCalledTimes(4);
 
-  debugSpy.mockImplementation((...args) => {
-    console.log(...args.map(String));
-  });
   await router.push('');
   expect(debugSpy).toHaveBeenCalledTimes(5);
 
