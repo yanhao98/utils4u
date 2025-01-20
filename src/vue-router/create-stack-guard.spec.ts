@@ -5,12 +5,19 @@
  * https://cn.vitest.dev/guide/browser/
  */
 import { flushPromises, mount } from '@vue/test-utils';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import { createStackGuard } from '.';
 
 describe('createStackGuard', () => {
+  const debugSpy = vi.spyOn(globalThis.window.console, 'debug');
+
+  debugSpy.mockImplementation((...args) => {
+    if (process.env.TERM_PROGRAM !== 'vscode') return;
+    console.log(...args);
+  });
+
   it('simple test', async () => {
     function backPromise(): Promise<void> {
       router.back();
