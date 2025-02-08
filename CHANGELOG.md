@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/yanhao98/utils4u/compare/v3.3.0...v4.0.0) (2025-02-08)
+
+
+### chore
+
+* 更新 CI 配置，添加 CI 状态徽章并移除 useCountdown 相关代码 ([4d599d1](https://github.com/yanhao98/utils4u/commit/4d599d1bc758de1609e2fa38b379762bb0848c67))
+
+
+### BREAKING CHANGES
+
+* 移除 useCountdown
+
 # [3.3.0](https://github.com/yanhao98/utils4u/compare/v3.2.0...v3.3.0) (2025-01-08)
 
 
