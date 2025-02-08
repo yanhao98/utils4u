@@ -6,7 +6,7 @@ export function createUtils4uAutoImports(deps: Deps[]): ImportsMap {
   const imports: ImportsMap = {
     'deep-freeze-es6': [['default', 'deepFreeze']],
     // 待整理 https://github.com/unplugin/unplugin-auto-import/blob/627f60a114ea82995a2ce9814374c0bcc1e17904/src/presets/index.ts
-    'utils4u/vue-use': ['useCountdown', 'useRefs'],
+    'utils4u/vue-use': ['useRefs'],
     'utils4u/vue-router': ['createLogGuard', 'createNProgressGuard', 'createStackGuard'],
     'utils4u/browser': ['setViewportCSSVars', 'showOpenFilePicker', 'convertFileToBase64'],
     'utils4u/array': ['arrayToTree'],
