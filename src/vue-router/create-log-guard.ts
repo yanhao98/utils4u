@@ -33,7 +33,7 @@ export function createLogGuard(router: Router) {
       ']',
       '====================',
       isAfter ? '🚗' : '↙️',
-      ...(failure ? ['🚨 failure:', failure] : [])
+      ...(failure ? ['🚨 failure:', failure] : []),
     );
   }
 
