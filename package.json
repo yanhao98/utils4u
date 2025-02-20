@@ -23,7 +23,8 @@
     "lint": "run-s lint:*",
     "format": "prettier --write src/",
     "prepublishOnly": "npm run build && npm run type-check",
-    "tgz": "npm run build && npm pack"
+    "tgz": "npm run build && npm pack",
+    "size-limit": "size-limit"
   },
   "peerDependencies": {
     "@vueuse/core": "^12.3.0",
@@ -62,6 +63,8 @@
     }
   },
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.2.0",
+    "@size-limit/time": "^11.2.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.13.4",
@@ -84,6 +87,7 @@
     "nprogress": "^0.2.0",
     "oxlint": "^0.15.11",
     "prettier": "^3.5.1",
+    "size-limit": "^11.2.0",
     "terser": "^5.39.0",
     "tinybench": "^3.1.1",
     "tinyglobby": "^0.2.12",
