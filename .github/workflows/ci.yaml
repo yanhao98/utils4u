@@ -18,6 +18,7 @@ jobs:
       - run: pnpm lint
       - run: pnpm type-check
       - run: pnpm build
+      - run: pnpx publint # https://publint.dev/
       - run: pnpm vitest --coverage
       - uses: codecov/codecov-action@v4
         with:
