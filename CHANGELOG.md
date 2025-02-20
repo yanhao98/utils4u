@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/yanhao98/utils4u/compare/v4.1.0...v4.2.0) (2025-02-20)
+
+
+### Features
+
+* 添加发布工作流以支持对任何提交的发布 ([f24a704](https://github.com/yanhao98/utils4u/commit/f24a704b7569bff51a3380a358f3030684d64d17))
+
 # [4.1.0](https://github.com/yanhao98/utils4u/compare/v4.0.0...v4.1.0) (2025-02-20)
 
 
