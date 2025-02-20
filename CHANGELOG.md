@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/yanhao98/utils4u/compare/v4.0.0...v4.1.0) (2025-02-20)
+
+
+### Features
+
+* 添加 size-limit 配置和 GitHub Actions 工作流以监控构建大小 ([3ed7ea3](https://github.com/yanhao98/utils4u/commit/3ed7ea3a8539f0f83e1aa1da285b63844ec08ed9))
+
 # [4.0.0](https://github.com/yanhao98/utils4u/compare/v3.3.0...v4.0.0) (2025-02-08)
 
 
