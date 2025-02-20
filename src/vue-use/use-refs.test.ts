@@ -12,6 +12,12 @@ vi.mock('vue', () => ({
 }));
 
 describe('useRefs', () => {
+  const errorSpy = vi.spyOn(globalThis.window.console, 'error');
+
+  errorSpy.mockImplementation((...args) => {
+    if (process.env.TERM_PROGRAM !== 'vscode') return;
+    console.error(...args);
+  });
   it('当在 setup 外调用时应该发出警告', () => {
     const consoleSpy = vi.spyOn(console, 'warn');
     vi.mocked(getCurrentInstance).mockReturnValue(null);
