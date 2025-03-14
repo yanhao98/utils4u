@@ -1,3 +1,10 @@
+## [4.2.1](https://github.com/yanhao98/utils4u/compare/v4.2.0...v4.2.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* 更新 @vueuse/core 的 peerDependencies 版本要求 ([c4386b6](https://github.com/yanhao98/utils4u/commit/c4386b6e8e1a3f4083eaf0ab85ab0f3203a7939c))
+
 # [4.2.0](https://github.com/yanhao98/utils4u/compare/v4.1.0...v4.2.0) (2025-02-20)
 
 
