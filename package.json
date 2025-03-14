@@ -27,7 +27,7 @@
     "size-limit": "size-limit"
   },
   "peerDependencies": {
-    "@vueuse/core": "^12.3.0",
+    "@vueuse/core": ">=12.3.0",
     "dayjs": "^1.11.13",
     "nprogress": "^0.2.0",
     "primevue": "^4.2.5",
