@@ -1,3 +1,10 @@
+## [4.2.2](https://github.com/yanhao98/utils4u/compare/v4.2.1...v4.2.2) (2025-03-25)
+
+
+### Bug Fixes
+
+* 修复测试中对 console.warn 的调用 ([fc65408](https://github.com/yanhao98/utils4u/commit/fc65408943f70b84581761556653fb6015cc1801))
+
 ## [4.2.1](https://github.com/yanhao98/utils4u/compare/v4.2.0...v4.2.1) (2025-03-14)
 
 
