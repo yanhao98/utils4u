@@ -1,3 +1,10 @@
+## [4.2.3](https://github.com/yanhao98/utils4u/compare/v4.2.2...v4.2.3) (2025-03-25)
+
+
+### Bug Fixes
+
+* 更新多个依赖包 ([7acc0c1](https://github.com/yanhao98/utils4u/commit/7acc0c19242e9fc3659adf55efa51f135eb2ff51))
+
 ## [4.2.2](https://github.com/yanhao98/utils4u/compare/v4.2.1...v4.2.2) (2025-03-25)
 
 
