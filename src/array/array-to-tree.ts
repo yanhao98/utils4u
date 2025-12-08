@@ -14,11 +14,7 @@ const deepClone = globalThis.structuredClone ?? ((value: any) => JSON.parse(JSON
  */
 export function arrayToTree<T>(
   list: T[],
-  {
-    id,
-    parentId,
-    rootId = 0,
-  }: { id: string; parentId: string; rootId?: string | number | ((item: T) => boolean) },
+  { id, parentId, rootId = 0 }: { id: string; parentId: string; rootId?: string | number | ((item: T) => boolean) },
 ): TTree<T>[] {
   /** map between id and array position */
   const map: Record<string | number, number> = {};
