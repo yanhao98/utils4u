@@ -82,6 +82,36 @@ describe('arrayToTree', () => {
     expect(result).toEqual(expected);
   });
 
+  it('应该支持自定义根节点判断函数', () => {
+    const input = [
+      { id: 1, parentId: null, name: 'Root' },
+      { id: 2, parentId: 1, name: 'Child' },
+    ];
+
+    const expected = [
+      {
+        id: 1,
+        parentId: null,
+        name: 'Root',
+        children: [
+          {
+            id: 2,
+            parentId: 1,
+            name: 'Child',
+            children: [],
+          },
+        ],
+      },
+    ];
+
+    const result = arrayToTree(input, {
+      id: 'id',
+      parentId: 'parentId',
+      rootId: (item: any) => item.parentId === null,
+    });
+    expect(result).toEqual(expected);
+  });
+
   it('性能测试：处理大量数据', async () => {
     // 生成1000个节点的测试数据
     const input = Array.from({ length: 1000 }, (_, index) => ({

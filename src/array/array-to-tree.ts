@@ -14,10 +14,14 @@ const deepClone = globalThis.structuredClone ?? ((value: any) => JSON.parse(JSON
  */
 export function arrayToTree<T>(
   list: T[],
-  { id, parentId, rootId = 0 }: { id: any; parentId: any; rootId?: any },
+  {
+    id,
+    parentId,
+    rootId = 0,
+  }: { id: string; parentId: string; rootId?: string | number | ((item: T) => boolean) },
 ): TTree<T>[] {
   /** map between id and array position */
-  const map: number[] = [];
+  const map: Record<string | number, number> = {};
 
   // [深拷贝](https://baijiahao.baidu.com/s?id=1765652696079292086&wfr=spider&for=pc)
   const treeList: TTree<T>[] = deepClone(list) as TTree<T>[];
@@ -27,10 +31,15 @@ export function arrayToTree<T>(
   // console.debug(`treeList :>> `, treeList);
   for (const [i, element_] of treeList.entries()) {
     /** initialize the map */
-    map[(element_ as TTree<T> & { [id: string]: number })[id]] = i;
+    map[(element_ as unknown as Record<string, string | number>)[id]] = i;
     /** initialize the children */
     element_.children = [];
   }
+
+  const isRoot =
+    typeof rootId === 'function'
+      ? (item: T) => (rootId as (item: T) => boolean)(item)
+      : (item: T) => (item as unknown as Record<string, any>)[parentId] === rootId;
 
   let node: TTree<T> & { [parentId: string]: number };
   /** return value */
@@ -38,7 +47,7 @@ export function arrayToTree<T>(
 
   for (const item of treeList) {
     node = item as TTree<T> & { [parentId: string]: number };
-    if (node[parentId] === rootId) {
+    if (isRoot(node)) {
       roots.push(node);
     } else {
       if (treeList[map[node[parentId]]] !== undefined) {
