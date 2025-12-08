@@ -14,7 +14,7 @@ describe('convertFileToBase64', () => {
     expect(result).toBe(expectedBase64);
 
     // 把base64转换回文件内容
-    expect(atob(result.split(',')[1])).toBe('test');
+    expect(atob(result.split(',')[1]!)).toBe('test');
   });
 
   it('当FileReader发生错误时应该拒绝Promise', async () => {
@@ -22,15 +22,19 @@ describe('convertFileToBase64', () => {
     const mockError = new Error('FileReader错误');
 
     // 模拟FileReader以模拟错误
-    const mockFileReader = {
-      readAsDataURL: vi.fn(),
-      addEventListener: vi.fn((event, cb) => {
+    const OriginalFileReader = window.FileReader;
+    class MockFileReader {
+      readAsDataURL = vi.fn();
+      addEventListener = vi.fn((event: string, cb: (e: Error) => void) => {
         if (event === 'error') cb(mockError);
-      }),
-    };
+      });
+    }
+    window.FileReader = MockFileReader as unknown as typeof FileReader;
 
-    vi.spyOn(window, 'FileReader').mockImplementation(() => mockFileReader as any);
-
-    await expect(convertFileToBase64(mockFile)).rejects.toEqual(mockError);
+    try {
+      await expect(convertFileToBase64(mockFile)).rejects.toEqual(mockError);
+    } finally {
+      window.FileReader = OriginalFileReader;
+    }
   });
 });

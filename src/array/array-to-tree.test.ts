@@ -107,7 +107,7 @@ describe('arrayToTree', () => {
     const result = arrayToTree(input, {
       id: 'id',
       parentId: 'parentId',
-      rootId: (item: any) => item.parentId === null,
+      rootId: (item) => item.parentId === null,
     });
     expect(result).toEqual(expected);
   });

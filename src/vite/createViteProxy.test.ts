@@ -49,12 +49,12 @@ describe('createViteProxy', () => {
 
   it('应正确处理数组输入', () => {
     const result = createViteProxy([['/api', 'http://example.com']]);
-    expect(result['/api'].target).toBe('http://example.com');
+    expect(result['/api']!.target).toBe('http://example.com');
   });
 
   it('应正确处理https目标', () => {
     const result = createViteProxy([['/api', 'https://example.com']]);
-    expect(result['/api'].secure).toBe(false);
+    expect(result['/api']!.secure).toBe(false);
   });
 
   it('应正确处理无效的JSON字符串', () => {

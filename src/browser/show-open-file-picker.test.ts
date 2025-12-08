@@ -19,7 +19,7 @@ describe('showOpenFilePicker', () => {
     });
 
     expect(createElementSpy).toHaveBeenCalledWith('input');
-    const input = createElementSpy.mock.results[0].value as HTMLInputElement;
+    const input = createElementSpy.mock.results[0]!.value as HTMLInputElement;
 
     expect(input.type).toBe('file');
     expect(input.accept).toBe('.jpg,.png');
@@ -53,7 +53,7 @@ describe('showOpenFilePicker', () => {
 
     showOpenFilePicker({});
 
-    const input = createElementSpy.mock.results[0].value as HTMLInputElement;
+    const input = createElementSpy.mock.results[0]!.value as HTMLInputElement;
     expect(input.accept).toBe('');
     expect(input.multiple).toBe(false);
   });

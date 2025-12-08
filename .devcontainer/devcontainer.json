@@ -1,0 +1,44 @@
+{
+  "image": "ghcr.io/yanhao98/h-devcontainer:main",
+  "runArgs": [
+    "--name=${localWorkspaceFolderBasename}-devcontainer"
+  ],
+  "containerEnv": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "TZ": "${localEnv:TZ:Asia/Shanghai}"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "gruntfuggly.todo-tree",
+        "vitest.explorer",
+        // 代码质量 / 格式化 / Lint
+        "dbaeumer.vscode-eslint",
+        "oxc.oxc-vscode",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "chat.extensionUnification.enabled": true,
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=${localWorkspaceFolder}/.devcontainer/lifecycle-scripts.d,target=/usr/local/etc/lifecycle-scripts.d,type=bind,consistency=delegated"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=delegated",
+  "initializeCommand": "docker pull ghcr.io/yanhao98/h-devcontainer:main;",
+  "onCreateCommand": "/usr/local/bin/run-lifecycle-scripts.sh onCreateCommand",
+  "updateContentCommand": "/usr/local/bin/run-lifecycle-scripts.sh updateContentCommand",
+  "postCreateCommand": "/usr/local/bin/run-lifecycle-scripts.sh postCreateCommand",
+  "postStartCommand": "/usr/local/bin/run-lifecycle-scripts.sh postStartCommand",
+  "postAttachCommand": "/usr/local/bin/run-lifecycle-scripts.sh postAttachCommand",
+  "waitFor": "updateContentCommand",
+  "remoteUser": "usr_vscode"
+}

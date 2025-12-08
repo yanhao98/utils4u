@@ -25,7 +25,7 @@ describe('confirmDialog', () => {
     confirmDialog({
       title: dialogTitle,
       message: dialogMessage,
-      onConfirm: onConfirmSpy,
+      onConfirm: onConfirmSpy as () => Promise<unknown>,
       teleport: container,
     });
     await flushPromises();

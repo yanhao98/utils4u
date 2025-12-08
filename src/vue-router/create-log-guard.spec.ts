@@ -64,5 +64,6 @@ test('createLogGuard', async () => {
   await router.push('');
   expect(debugSpy).toHaveBeenCalledTimes(5);
 
-  expect(debugSpy.mock.calls.at(-1)?.some((arg) => arg.includes('🚨 failure:'))).toBe(true);
+  const lastCall = debugSpy.mock.calls[debugSpy.mock.calls.length - 1];
+  expect(lastCall?.some((arg: unknown) => String(arg).includes('🚨 failure:'))).toBe(true);
 });
