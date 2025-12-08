@@ -1,3 +1,20 @@
+# [5.0.0](https://github.com/yanhao98/utils4u/compare/v4.2.3...v5.0.0) (2025-12-08)
+
+
+### chore
+
+* 升级依赖。 ([3f68503](https://github.com/yanhao98/utils4u/commit/3f685033bf8e87ed34cfbe70caf7130781b4553e))
+
+
+### Features
+
+* **array-to-tree:** support function for rootId ([37fe0a3](https://github.com/yanhao98/utils4u/commit/37fe0a374b45ccd8a3ff77564a6352b40ced67ea))
+
+
+### BREAKING CHANGES
+
+* 大升级。
+
 ## [4.2.3](https://github.com/yanhao98/utils4u/compare/v4.2.2...v4.2.3) (2025-03-25)
 
 
