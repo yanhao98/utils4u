@@ -22,7 +22,7 @@ export default [
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
   },
-  oxlint.configs['flat/recommended'],
+  ...oxlint.configs['flat/recommended'],
   skipFormatting,
 
   {

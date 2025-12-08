@@ -2,7 +2,7 @@ name: autofix.ci # needed to securely identify the workflow
 on:
   pull_request:
   push:
-    branches: ['main', 'vite']
+    branches: ["main", "vite"]
 permissions:
   contents: read
 
@@ -10,11 +10,18 @@ jobs:
   autofix:
     runs-on: ubuntu-latest
     steps:
-      - uses: yanhao98/composite-actions/setup-node-environment@main
-
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - run: pnpm install
       - run: pnpm format
       - run: pnpm lint
+      - run: |
+          ls -lha
 
       - uses: autofix-ci/action@v1
         with:
-          commit-message: 'chore: apply automated updates'
+          commit-message: "chore: apply automated updates"
+          fail-fast: false
