@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: yanhao98/composite-actions/setup-node-environment@main
       - run: pnpm build
-      - run: pnpx pkg-pr-new publish # https://github.com/stackblitz-labs/pkg.pr.new?tab=readme-ov-file#examples
+      - run: pnpm dlx pkg-pr-new publish # https://github.com/stackblitz-labs/pkg.pr.new?tab=readme-ov-file#examples
