@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/yanhao98/utils4u/compare/v5.0.0...v5.0.1) (2025-12-09)
+
+
+### Bug Fixes
+
+* 禁用构建时的代码压缩 ([0c0a26f](https://github.com/yanhao98/utils4u/commit/0c0a26f56af2abf59fbe0e344b2351f8b29c48c8))
+
 # [5.0.0](https://github.com/yanhao98/utils4u/compare/v4.2.3...v5.0.0) (2025-12-08)
 
 
