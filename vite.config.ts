@@ -50,7 +50,7 @@ export default defineConfig({
   ],
   build: {
     sourcemap: true,
-    minify: 'terser',
+    minify: false,
     lib: { entry, formats: ['es'] },
     rollupOptions: {
       // external: externalDeps,
