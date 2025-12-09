@@ -82,7 +82,7 @@ describe('arrayToTree', () => {
     expect(result).toEqual(expected);
   });
 
-  it('应该支持自定义根节点判断函数', () => {
+  it('应该支持自定义根节点判断函数 (使用 isRoot)', () => {
     const input = [
       { id: 1, parentId: null, name: 'Root' },
       { id: 2, parentId: 1, name: 'Child' },
@@ -107,9 +107,51 @@ describe('arrayToTree', () => {
     const result = arrayToTree(input, {
       id: 'id',
       parentId: 'parentId',
-      rootId: (item) => item.parentId === null,
+      isRoot: (item) => item.parentId === null,
     });
     expect(result).toEqual(expected);
+  });
+
+  it('应该支持自动判断根节点 (无 rootId 或 isRoot)', () => {
+    // 自动判断逻辑：如果 parentId 在列表中找不到对应的 id，则认为是根节点
+    const input = [
+      { id: 1, parentId: 'root', name: 'Root' }, // 'root' 不在 ids 中，所以是根
+      { id: 2, parentId: 1, name: 'Child' },
+    ];
+
+    const expected = [
+      {
+        id: 1,
+        parentId: 'root',
+        name: 'Root',
+        children: [
+          {
+            id: 2,
+            parentId: 1,
+            name: 'Child',
+            children: [],
+          },
+        ],
+      },
+    ];
+
+    const result = arrayToTree(input, { id: 'id', parentId: 'parentId' });
+    expect(result).toEqual(expected);
+  });
+
+  it('应该在 auto 模式下正确处理多个根节点', () => {
+    const input = [
+      { id: 1, parentId: 0, name: 'Root 1' },
+      { id: 2, parentId: 0, name: 'Root 2' },
+      { id: 3, parentId: 1, name: 'Child 1' },
+    ];
+
+    const result = arrayToTree(input, { id: 'id', parentId: 'parentId' });
+
+    expect(result.length).toBe(2);
+    expect(result[0].id).toBe(1);
+    expect(result[1].id).toBe(2);
+    expect(result[0].children?.length).toBe(1);
   });
 
   it('性能测试：处理大量数据', async () => {

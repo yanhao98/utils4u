@@ -14,17 +14,24 @@ const deepClone = globalThis.structuredClone ?? ((value: any) => JSON.parse(JSON
  */
 export function arrayToTree<T>(
   list: T[],
-  { id, parentId, rootId = 0 }: { id: string; parentId: string; rootId?: string | number | ((item: T) => boolean) },
+  {
+    id,
+    parentId,
+    rootId,
+    isRoot,
+  }: {
+    id: string;
+    parentId: string;
+    rootId?: string | number;
+    isRoot?: (item: T) => boolean;
+  },
 ): TTree<T>[] {
   /** map between id and array position */
   const map: Record<string | number, number> = {};
 
   // [深拷贝](https://baijiahao.baidu.com/s?id=1765652696079292086&wfr=spider&for=pc)
   const treeList: TTree<T>[] = deepClone(list) as TTree<T>[];
-  // const treeList: TTree<T>[] = cloneDeep(list) as TTree<T>[];
-  // console.debug('list :>> ', JSON.stringify(list, null, 2), list);
-  // console.debug(`list :>> `, list);
-  // console.debug(`treeList :>> `, treeList);
+
   for (const [i, element_] of treeList.entries()) {
     /** initialize the map */
     map[(element_ as unknown as Record<string, string | number>)[id]!] = i;
@@ -32,22 +39,32 @@ export function arrayToTree<T>(
     element_.children = [];
   }
 
-  const isRoot =
-    typeof rootId === 'function'
-      ? (item: T) => (rootId as (item: T) => boolean)(item)
-      : (item: T) => (item as unknown as Record<string, any>)[parentId] === rootId;
-
-  let node: TTree<T> & { [parentId: string]: number };
+  let node: TTree<T> & Record<string, any>;
   /** return value */
   const roots: TTree<T>[] = [];
 
   for (const item of treeList) {
-    node = item as TTree<T> & { [parentId: string]: number };
-    if (isRoot(node)) {
+    node = item as TTree<T> & Record<string, any>;
+    const parentIdValue = node[parentId];
+
+    let isRootNode = false;
+
+    if (isRoot) {
+      isRootNode = isRoot(node);
+    } else if (rootId !== undefined) {
+      isRootNode = parentIdValue === rootId;
+    } else {
+      // Auto-detection: if parentId is not in the map, it's a root
+      isRootNode = map[parentIdValue] === undefined;
+    }
+
+    if (isRootNode) {
       roots.push(node);
     } else {
-      const parentIndex = map[node[parentId]!]!;
-      treeList[parentIndex]?.children?.push(node);
+      const parentIndex = map[parentIdValue];
+      if (parentIndex !== undefined) {
+        treeList[parentIndex]?.children?.push(node);
+      }
     }
   }
   return roots;
