@@ -149,9 +149,9 @@ describe('arrayToTree', () => {
     const result = arrayToTree(input, { id: 'id', parentId: 'parentId' });
 
     expect(result.length).toBe(2);
-    expect(result[0].id).toBe(1);
-    expect(result[1].id).toBe(2);
-    expect(result[0].children?.length).toBe(1);
+    expect(result[0]?.id).toBe(1);
+    expect(result[1]?.id).toBe(2);
+    expect(result[0]?.children?.length).toBe(1);
   });
 
   it('性能测试：处理大量数据', async () => {
