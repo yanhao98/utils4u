@@ -1,3 +1,16 @@
+# [5.1.0](https://github.com/yanhao98/utils4u/compare/v5.0.1...v5.1.0) (2025-12-19)
+
+
+### Bug Fixes
+
+* **ci:** fix release ([7b6b62e](https://github.com/yanhao98/utils4u/commit/7b6b62e6257fe15e8b055720ddd9b077895dfd43))
+
+
+### Features
+
+* **array:** add omitEmptyChildren option to arrayToTree ([ad0b873](https://github.com/yanhao98/utils4u/commit/ad0b87356a929ce9f38617a69c6c16c740f02615))
+* **array:** add omitEmptyChildren option to arrayToTree ([89e18ea](https://github.com/yanhao98/utils4u/commit/89e18ea04efab87addf238bfb4acde2a6432ab4a))
+
 ## [5.0.1](https://github.com/yanhao98/utils4u/compare/v5.0.0...v5.0.1) (2025-12-09)
 
 
