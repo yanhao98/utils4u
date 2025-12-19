@@ -163,7 +163,9 @@ describe('arrayToTree', () => {
 
     const result = arrayToTree(input, { id: 'id', parentId: 'parentId', omitEmptyChildren: true });
     expect(result).toEqual(expected);
-    expect((result[0]?.children?.[0] as any).children).toBeUndefined();
+    const child = result[0]?.children?.[0];
+    expect(child).toBeDefined();
+    expect((child as any).children).toBeUndefined();
   });
 
   it('应该支持 omitEmptyChildren 选项 (omitEmptyChildren: false)', () => {
@@ -190,7 +192,9 @@ describe('arrayToTree', () => {
 
     const result = arrayToTree(input, { id: 'id', parentId: 'parentId', omitEmptyChildren: false });
     expect(result).toEqual(expected);
-    expect(Array.isArray((result[0]?.children?.[0] as any).children)).toBe(true);
+    const child = result[0]?.children?.[0];
+    expect(child).toBeDefined();
+    expect(Array.isArray((child as any).children)).toBe(true);
   });
 
   it('应该在 auto 模式下正确处理多个根节点', () => {
