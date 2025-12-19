@@ -139,6 +139,60 @@ describe('arrayToTree', () => {
     expect(result).toEqual(expected);
   });
 
+  it('应该支持 omitEmptyChildren 选项 (omitEmptyChildren: true)', () => {
+    const input = [
+      { id: 1, parentId: 0, name: 'Root' },
+      { id: 2, parentId: 1, name: 'Child' },
+    ];
+
+    const expected = [
+      {
+        id: 1,
+        parentId: 0,
+        name: 'Root',
+        children: [
+          {
+            id: 2,
+            parentId: 1,
+            name: 'Child',
+            // children property should be absent
+          },
+        ],
+      },
+    ];
+
+    const result = arrayToTree(input, { id: 'id', parentId: 'parentId', omitEmptyChildren: true });
+    expect(result).toEqual(expected);
+    expect((result[0]?.children?.[0] as any).children).toBeUndefined();
+  });
+
+  it('应该支持 omitEmptyChildren 选项 (omitEmptyChildren: false)', () => {
+    const input = [
+      { id: 1, parentId: 0, name: 'Root' },
+      { id: 2, parentId: 1, name: 'Child' },
+    ];
+
+    const expected = [
+      {
+        id: 1,
+        parentId: 0,
+        name: 'Root',
+        children: [
+          {
+            id: 2,
+            parentId: 1,
+            name: 'Child',
+            children: [],
+          },
+        ],
+      },
+    ];
+
+    const result = arrayToTree(input, { id: 'id', parentId: 'parentId', omitEmptyChildren: false });
+    expect(result).toEqual(expected);
+    expect(Array.isArray((result[0]?.children?.[0] as any).children)).toBe(true);
+  });
+
   it('应该在 auto 模式下正确处理多个根节点', () => {
     const input = [
       { id: 1, parentId: 0, name: 'Root 1' },

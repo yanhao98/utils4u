@@ -19,11 +19,13 @@ export function arrayToTree<T>(
     parentId,
     rootId,
     isRoot,
+    omitEmptyChildren,
   }: {
     id: string;
     parentId: string;
     rootId?: string | number;
     isRoot?: (item: T) => boolean;
+    omitEmptyChildren?: boolean;
   },
 ): TTree<T>[] {
   /** map between id and array position */
@@ -67,5 +69,14 @@ export function arrayToTree<T>(
       }
     }
   }
+
+  if (omitEmptyChildren) {
+    for (const item of treeList) {
+      if (item.children?.length === 0) {
+        delete item.children;
+      }
+    }
+  }
+
   return roots;
 }
